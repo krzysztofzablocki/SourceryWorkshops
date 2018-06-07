@@ -17,6 +17,7 @@
 		CD4F088420C962CD00DF6CCF /* ArticleWebSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F088320C962CD00DF6CCF /* ArticleWebSettings.swift */; };
 		CD4F088620C962DC00DF6CCF /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F088520C962DC00DF6CCF /* Dependencies.swift */; };
 		CD4F088820C9637600DF6CCF /* ProtocolsToMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F088720C9637600DF6CCF /* ProtocolsToMock.swift */; };
+		CD4F088C20C9695C00DF6CCF /* Info.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F088B20C9695B00DF6CCF /* Info.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		CD4F088320C962CD00DF6CCF /* ArticleWebSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebSettings.swift; sourceTree = "<group>"; };
 		CD4F088520C962DC00DF6CCF /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		CD4F088720C9637600DF6CCF /* ProtocolsToMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsToMock.swift; sourceTree = "<group>"; };
+		CD4F088B20C9695B00DF6CCF /* Info.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		CD4F085F20C9626900DF6CCF /* SourceryDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CD4F088A20C9695100DF6CCF /* Generated */,
 				CD4F088020C9628E00DF6CCF /* Models */,
 				CD4F086020C9626900DF6CCF /* AppDelegate.swift */,
 				CD4F086220C9626900DF6CCF /* ViewController.swift */,
@@ -116,6 +119,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		CD4F088A20C9695100DF6CCF /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				CD4F088B20C9695B00DF6CCF /* Info.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,6 +134,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD4F087A20C9626B00DF6CCF /* Build configuration list for PBXNativeTarget "SourceryDemo" */;
 			buildPhases = (
+				CD4F088920C9692000DF6CCF /* 🛠 Sourcery */,
 				CD4F085920C9626900DF6CCF /* Sources */,
 				CD4F085A20C9626900DF6CCF /* Frameworks */,
 				CD4F085B20C9626900DF6CCF /* Resources */,
@@ -212,12 +224,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CD4F088920C9692000DF6CCF /* 🛠 Sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "🛠 Sourcery";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Sourcery-0.13.1/bin/sourcery";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD4F085920C9626900DF6CCF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CD4F086320C9626900DF6CCF /* ViewController.swift in Sources */,
+				CD4F088C20C9695C00DF6CCF /* Info.generated.swift in Sources */,
 				CD4F088220C962B900DF6CCF /* FeatureFlag.swift in Sources */,
 				CD4F088420C962CD00DF6CCF /* ArticleWebSettings.swift in Sources */,
 				CD4F088820C9637600DF6CCF /* ProtocolsToMock.swift in Sources */,
