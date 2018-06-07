@@ -1,0 +1,8 @@
+/*
+This project consists of:
+
+- {{types.enums.count}} enums
+- {{types.structs.count}} structs
+- {{types.classes.count}} classes
+- {{types.protocols.count}} protocols
+*/
