@@ -1,5 +1,5 @@
 // AutoCases
-{% for enum in types.enums %}
+{% for enum in types.implementing.AutoCases|enum %}
 extension {{ enum.name }} {
   static let count: Int = {{ enum.cases.count }}
   {% if not enum.hasAssociatedValues %}
