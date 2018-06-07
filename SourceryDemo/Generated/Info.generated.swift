@@ -8,4 +8,14 @@ This project consists of:
 - 2 structs
 - 2 classes
 - 6 protocols
+
+Following protocols were found:
+
+ - ApiClient
+ - BasicProtocol
+ - ContentCoordinator
+ - ImageProvider
+ - InitializationProtocol
+ - VariablesProtocol
+
 */

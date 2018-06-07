@@ -5,4 +5,11 @@ This project consists of:
 - {{types.structs.count}} structs
 - {{types.classes.count}} classes
 - {{types.protocols.count}} protocols
+
+Following protocols were found:
+
+{% for type in types.protocols %}
+ - {{ type.name }}
+{% endfor %}
+
 */
