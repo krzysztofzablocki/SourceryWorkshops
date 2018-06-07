@@ -1,6 +1,6 @@
 // AutoCases
 {% for enum in types.enums %}
 extension {{ enum.name }} {
-  
+  static let count = {{ enum.cases.count }}
 }
 {% endfor %}

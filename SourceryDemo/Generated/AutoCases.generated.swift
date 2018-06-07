@@ -3,4 +3,5 @@
 
 // AutoCases
 extension FeatureFlag {
+  static let count = 4
 }
