@@ -1,1 +1,6 @@
 // AutoCases
+{% for enum in types.enums %}
+extension {{ enum.name }} {
+  
+}
+{% endfor %}

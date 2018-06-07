@@ -2,3 +2,5 @@
 // DO NOT EDIT
 
 // AutoCases
+extension FeatureFlag {
+}
