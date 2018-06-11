@@ -1,1 +1,8 @@
 // AutoEquatable
+
+{% for type in types.implementing.AutoEquatable|struct %}
+extension {{type.name}}: Equatable {
+  static func == (lhs: {{type.name}}, rhs: {{type.name}}) -> Bool {
+    return true
+  }
+{% endfor %}

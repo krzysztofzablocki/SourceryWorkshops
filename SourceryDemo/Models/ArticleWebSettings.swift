@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct ArticleWebViewSettings {
+struct ArticleWebViewSettings: AutoEquatable {
     var appBackgroundColor: UIColor
     var nativeAdsEnabled: Bool
     var initialNumberOfAdsToFetch: Int

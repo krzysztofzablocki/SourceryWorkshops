@@ -2,3 +2,8 @@
 // DO NOT EDIT
 
 // AutoEquatable
+
+extension ArticleWebViewSettings: Equatable {
+  static func == (lhs: ArticleWebViewSettings, rhs: ArticleWebViewSettings) -> Bool {
+    return true
+  }
