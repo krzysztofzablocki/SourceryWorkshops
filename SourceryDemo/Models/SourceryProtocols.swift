@@ -14,3 +14,6 @@ protocol AutoCases {}
 
 /// Enables automatic generation of `equatable` conformance
 protocol AutoEquatable {}
+
+/// Enables automatic generation of `HasObject` composition protocols
+protocol AutoProperties {}

@@ -2,3 +2,6 @@
 // DO NOT EDIT
 
 // AutoProperties
+
+// MARK: Protocols from Dependencies
+

@@ -1,1 +1,6 @@
 // AutoProperties
+
+{% for type in types.implementing.AutoProperties %}
+// MARK: Protocols from {{type.name}}
+
+{% endfor %}

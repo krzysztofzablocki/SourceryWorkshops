@@ -12,7 +12,7 @@ protocol ApiClient {}
 protocol ContentCoordinator {}
 protocol ImageProvider {}
 
-struct Dependencies {
+struct Dependencies: AutoProperties {
     let apiClient: ApiClient
     let contentCoordinator: ContentCoordinator
     let imageProvider: ImageProvider
