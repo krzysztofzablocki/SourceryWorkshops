@@ -20,6 +20,7 @@
 		CD4F088C20C9695C00DF6CCF /* Info.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F088B20C9695B00DF6CCF /* Info.generated.swift */; };
 		CD4F088E20C96A0A00DF6CCF /* AutoCases.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F088D20C96A0900DF6CCF /* AutoCases.generated.swift */; };
 		CD4F089020C9769700DF6CCF /* SourceryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F088F20C9769700DF6CCF /* SourceryProtocols.swift */; };
+		CD4F089220CEF6A300DF6CCF /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F089120CEF6A200DF6CCF /* AutoEquatable.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		CD4F088B20C9695B00DF6CCF /* Info.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.generated.swift; sourceTree = "<group>"; };
 		CD4F088D20C96A0900DF6CCF /* AutoCases.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCases.generated.swift; sourceTree = "<group>"; };
 		CD4F088F20C9769700DF6CCF /* SourceryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryProtocols.swift; sourceTree = "<group>"; };
+		CD4F089120CEF6A200DF6CCF /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		CD4F088A20C9695100DF6CCF /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				CD4F089120CEF6A200DF6CCF /* AutoEquatable.generated.swift */,
 				CD4F088D20C96A0900DF6CCF /* AutoCases.generated.swift */,
 				CD4F088B20C9695B00DF6CCF /* Info.generated.swift */,
 			);
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4F089220CEF6A300DF6CCF /* AutoEquatable.generated.swift in Sources */,
 				CD4F086320C9626900DF6CCF /* ViewController.swift in Sources */,
 				CD4F089020C9769700DF6CCF /* SourceryProtocols.swift in Sources */,
 				CD4F088E20C96A0A00DF6CCF /* AutoCases.generated.swift in Sources */,
