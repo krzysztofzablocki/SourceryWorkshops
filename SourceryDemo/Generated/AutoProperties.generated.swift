@@ -4,4 +4,18 @@
 // AutoProperties
 
 // MARK: Protocols from Dependencies
+protocol HasApiClient { 
+  var apiClient: ApiClient { get } 
+}
+extension Dependencies: HasApiClient {}
+
+protocol HasContentCoordinator { 
+  var contentCoordinator: ContentCoordinator { get } 
+}
+extension Dependencies: HasContentCoordinator {}
+
+protocol HasImageProvider { 
+  var imageProvider: ImageProvider { get } 
+}
+extension Dependencies: HasImageProvider {}
 

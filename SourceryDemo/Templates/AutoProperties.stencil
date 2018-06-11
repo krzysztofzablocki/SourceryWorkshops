@@ -2,5 +2,12 @@
 
 {% for type in types.implementing.AutoProperties %}
 // MARK: Protocols from {{type.name}}
+{% for p in type.storedVariables %}
+{% set protocolName %}Has{{p.name|titlecase}}{% endset %}
+protocol {{protocolName}} { 
+  var {{p.name}}: {{p.actualTypeName}} { get } 
+}
+extension {{type.name}}: {{protocolName}} {}
 
+{% endfor %}
 {% endfor %}
