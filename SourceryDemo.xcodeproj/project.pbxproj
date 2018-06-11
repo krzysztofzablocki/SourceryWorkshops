@@ -21,6 +21,7 @@
 		CD4F088E20C96A0A00DF6CCF /* AutoCases.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F088D20C96A0900DF6CCF /* AutoCases.generated.swift */; };
 		CD4F089020C9769700DF6CCF /* SourceryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F088F20C9769700DF6CCF /* SourceryProtocols.swift */; };
 		CD4F089220CEF6A300DF6CCF /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F089120CEF6A200DF6CCF /* AutoEquatable.generated.swift */; };
+		CD4F089D20CEFBAC00DF6CCF /* AutoProperties.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F089C20CEFBAC00DF6CCF /* AutoProperties.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		CD4F088D20C96A0900DF6CCF /* AutoCases.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCases.generated.swift; sourceTree = "<group>"; };
 		CD4F088F20C9769700DF6CCF /* SourceryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryProtocols.swift; sourceTree = "<group>"; };
 		CD4F089120CEF6A200DF6CCF /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
+		CD4F089C20CEFBAC00DF6CCF /* AutoProperties.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoProperties.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		CD4F088A20C9695100DF6CCF /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				CD4F089C20CEFBAC00DF6CCF /* AutoProperties.generated.swift */,
 				CD4F089120CEF6A200DF6CCF /* AutoEquatable.generated.swift */,
 				CD4F088D20C96A0900DF6CCF /* AutoCases.generated.swift */,
 				CD4F088B20C9695B00DF6CCF /* Info.generated.swift */,
@@ -264,6 +267,7 @@
 				CD4F088420C962CD00DF6CCF /* ArticleWebSettings.swift in Sources */,
 				CD4F088820C9637600DF6CCF /* ProtocolsToMock.swift in Sources */,
 				CD4F088620C962DC00DF6CCF /* Dependencies.swift in Sources */,
+				CD4F089D20CEFBAC00DF6CCF /* AutoProperties.generated.swift in Sources */,
 				CD4F086120C9626900DF6CCF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
