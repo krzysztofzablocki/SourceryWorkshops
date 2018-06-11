@@ -14,5 +14,6 @@ struct ArticleWebViewSettings: AutoEquatable {
     var initialNumberOfAdsToFetch: Int
     var adFetchDelay: TimeInterval
 
+    // sourcery: skipEquality
     var intermediateValue: Int
 }

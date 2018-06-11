@@ -3,7 +3,7 @@
 {% for type in types.implementing.AutoEquatable|struct %}
 extension {{type.name}}: Equatable {
   static func == (lhs: {{type.name}}, rhs: {{type.name}}) -> Bool {
-    {% for variable in type.storedVariables %}guard lhs.{{variable.name}} == rhs.{{variable.name}} else { return false }
+    {% for variable in type.storedVariables|!annotated:"skipEquality" %}guard lhs.{{variable.name}} == rhs.{{variable.name}} else { return false }
     {% endfor %}
     return true
   }

@@ -9,7 +9,6 @@ extension ArticleWebViewSettings: Equatable {
     guard lhs.nativeAdsEnabled == rhs.nativeAdsEnabled else { return false }
     guard lhs.initialNumberOfAdsToFetch == rhs.initialNumberOfAdsToFetch else { return false }
     guard lhs.adFetchDelay == rhs.adFetchDelay else { return false }
-    guard lhs.intermediateValue == rhs.intermediateValue else { return false }
     return true
   }
 }
