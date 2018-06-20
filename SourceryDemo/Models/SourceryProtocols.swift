@@ -17,3 +17,6 @@ protocol AutoEquatable {}
 
 /// Enables automatic generation of `HasObject` composition protocols
 protocol AutoProperties {}
+
+/// Enables automatic generation of mocks
+protocol AutoMockable {}

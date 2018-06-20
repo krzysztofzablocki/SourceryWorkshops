@@ -19,7 +19,7 @@ protocol InitializationProtocol {
     func stop()
 }
 
-protocol VariablesProtocol {
+protocol VariablesProtocol: AutoMockable {
     var company: String? { get set }
     var name: String { get }
     var age: Int { get }

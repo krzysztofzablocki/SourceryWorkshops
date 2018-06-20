@@ -7,13 +7,14 @@ This project consists of:
 - 1 enums
 - 2 structs
 - 2 classes
-- 9 protocols
+- 10 protocols
 
 Following protocols were found:
 
  - ApiClient
  - AutoCases
  - AutoEquatable
+ - AutoMockable
  - AutoProperties
  - BasicProtocol
  - ContentCoordinator
