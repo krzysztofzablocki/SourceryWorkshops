@@ -55,6 +55,44 @@ class BasicProtocolMock: BasicProtocol {
     }
 
 }
+class InitializationProtocolMock: InitializationProtocol {
+
+    //MARK: - init
+
+    var initIntParameterStringParameterOptionalParameterReceivedArguments: (intParameter: Int, stringParameter: String, optionalParameter: String?)?
+    var initIntParameterStringParameterOptionalParameterClosure: ((Int, String, String?) -> Void)?
+
+    required init(intParameter: Int, stringParameter: String, optionalParameter: String?) {
+        initIntParameterStringParameterOptionalParameterReceivedArguments = (intParameter: intParameter, stringParameter: stringParameter, optionalParameter: optionalParameter)
+        initIntParameterStringParameterOptionalParameterClosure?(intParameter, stringParameter, optionalParameter)
+    }
+    //MARK: - start
+
+    var startCallsCount = 0
+    var startCalled: Bool {
+        return startCallsCount > 0
+    }
+    var startClosure: (() -> Void)?
+
+    func start() {
+        startCallsCount += 1
+        startClosure?()
+    }
+
+    //MARK: - stop
+
+    var stopCallsCount = 0
+    var stopCalled: Bool {
+        return stopCallsCount > 0
+    }
+    var stopClosure: (() -> Void)?
+
+    func stop() {
+        stopCallsCount += 1
+        stopClosure?()
+    }
+
+}
 class VariablesProtocolMock: VariablesProtocol {
     var company: String?
     var name: String {

@@ -13,7 +13,7 @@ protocol BasicProtocol: AutoMockable {
     func save(configuration: String)
 }
 
-protocol InitializationProtocol {
+protocol InitializationProtocol: AutoMockable {
     init(intParameter: Int, stringParameter: String, optionalParameter: String?)
     func start()
     func stop()
