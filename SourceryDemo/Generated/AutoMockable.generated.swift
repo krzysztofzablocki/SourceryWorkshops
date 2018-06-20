@@ -1,7 +1,22 @@
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-// AutoMockable
+// swiftlint:disable line_length
+// swiftlint:disable variable_name
+
+import Foundation
+#if os(iOS) || os(tvOS) || os(watchOS)
+import UIKit
+#elseif os(OSX)
+import AppKit
+#endif
+
+
+
+
+
+
+
 
 
 
@@ -10,47 +25,49 @@
 
 class BasicProtocolMock: BasicProtocol {
 
+    //MARK: - loadConfiguration
 
-  var returnValueForLoadConfiguration: String!
+    var loadConfigurationCallsCount = 0
+    var loadConfigurationCalled: Bool {
+        return loadConfigurationCallsCount > 0
+    }
+    var loadConfigurationReturnValue: String?
+    var loadConfigurationClosure: (() -> String?)?
 
-  func loadConfiguration() -> String? {
+    func loadConfiguration() -> String? {
+        loadConfigurationCallsCount += 1
+        return loadConfigurationClosure.map({ $0() }) ?? loadConfigurationReturnValue
+    }
 
-    return returnValueForLoadConfiguration
-  }
+    //MARK: - save
 
-  var receivedSaveConfiguration: String!
+    var saveConfigurationCallsCount = 0
+    var saveConfigurationCalled: Bool {
+        return saveConfigurationCallsCount > 0
+    }
+    var saveConfigurationReceivedConfiguration: String?
+    var saveConfigurationClosure: ((String) -> Void)?
 
-
-  func save(configuration: String) -> Void {
-    receivedSaveConfiguration = configuration
-
-  }
+    func save(configuration: String) {
+        saveConfigurationCallsCount += 1
+        saveConfigurationReceivedConfiguration = configuration
+        saveConfigurationClosure?(configuration)
+    }
 
 }
-
 class VariablesProtocolMock: VariablesProtocol {
-  var company: String? {
-    get {
-      return underlyingCompany
+    var company: String?
+    var name: String {
+        get { return underlyingName }
+        set(value) { underlyingName = value }
     }
-    set {
-      underlyingCompany = newValue
+    var underlyingName: String!
+    var age: Int {
+        get { return underlyingAge }
+        set(value) { underlyingAge = value }
     }
-  }
-  var underlyingCompany: String!
-
-  var name: String { return underlyingName }
-  var underlyingName: String!
-
-  var age: Int { return underlyingAge }
-  var underlyingAge: Int!
-
-  var kids: [String] { return underlyingKids }
-  var underlyingKids: [String]!
-
-  var universityMarks: [String: Int] { return underlyingUniversityMarks }
-  var underlyingUniversityMarks: [String: Int]!
-
+    var underlyingAge: Int!
+    var kids: [String] = []
+    var universityMarks: [String: Int] = [:]
 
 }
-
