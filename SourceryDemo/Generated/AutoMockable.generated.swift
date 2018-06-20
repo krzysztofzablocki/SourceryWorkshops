@@ -3,10 +3,22 @@
 
 // AutoMockable
 
+
+
 class VariablesProtocolMock {
   var company: String?
+  var underlyingCompany: String!
+
   var name: String
+  var underlyingName: String!
+
   var age: Int
+  var underlyingAge: Int!
+
   var kids: [String]
+  var underlyingKids: [String]!
+
   var universityMarks: [String: Int]
+  var underlyingUniversityMarks: [String: Int]!
+
 }
