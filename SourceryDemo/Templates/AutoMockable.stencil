@@ -2,21 +2,23 @@
 
 {% macro addUnderlyingVariable variable %}
   var {{variable.name}}: {{variable.typeName}}{% if variable.isMutable %}{% call addMutableAccessors variable %}{% else %}{% call addReadOnlyAccessor variable %}{% endif %}
-  var underlying{{variable.name|upperFirstLetter}}: {{variable.unwrappedTypeName}}!
+  var {% call underlyingVariableName variable %}: {{variable.unwrappedTypeName}}!
 {% endmacro %}
 
 {% macro addMutableAccessors variable %} {
     get {
-      return underlying{{variable.name|upperFirstLetter}}
+      return {% call underlyingVariableName variable %}
     }
     set {
-      underlying{{variable.name|upperFirstLetter}} = newValue
+      {% call underlyingVariableName variable %} = newValue
     }
   }
 {% endmacro %}
 
-{% macro addReadOnlyAccessor variable %} { return underlying{{variable.name|upperFirstLetter}} }
+{% macro addReadOnlyAccessor variable %} { return {% call underlyingVariableName variable %} }
 {% endmacro %}
+
+{% macro underlyingVariableName variable %}underlying{{variable.name|upperFirstLetter}}{% endmacro %}
 
 {% for protocol in types.implementing.AutoMockable|protocol %}
 class {{protocol.name}}Mock {

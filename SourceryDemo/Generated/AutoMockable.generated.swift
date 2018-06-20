@@ -6,6 +6,7 @@
 
 
 
+
 class VariablesProtocolMock {
   var company: String? {
     get {
