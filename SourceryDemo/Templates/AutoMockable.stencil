@@ -21,7 +21,7 @@
 {% macro underlyingVariableName variable %}underlying{{variable.name|upperFirstLetter}}{% endmacro %}
 
 {% for protocol in types.implementing.AutoMockable|protocol %}
-class {{protocol.name}}Mock {
+class {{protocol.name}}Mock: {{protocol.name}} {
   {% for variable in protocol.variables %}
   {% call addUnderlyingVariable variable %}
 

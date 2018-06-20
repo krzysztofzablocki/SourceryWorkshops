@@ -7,7 +7,7 @@
 
 
 
-class VariablesProtocolMock {
+class VariablesProtocolMock: VariablesProtocol {
   var company: String? {
     get {
       return underlyingCompany
