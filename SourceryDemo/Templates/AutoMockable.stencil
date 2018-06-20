@@ -1,1 +1,9 @@
 // AutoMockable
+
+{% for protocol in types.implementing.AutoMockable|protocol %}
+class {{protocol.name}}Mock {
+  {% for variable in protocol.variables %}
+  var {{variable.name}}: {{variable.typeName}}
+  {% endfor %}
+}
+{% endfor %}
