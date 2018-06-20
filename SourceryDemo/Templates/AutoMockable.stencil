@@ -36,7 +36,9 @@ class {{protocol.name}}Mock: {{protocol.name}} {
   {% endfor %}
 
   func {{function.name}} -> {{function.returnTypeName}} {
-
+    {% for parameter in function.parameters %}
+    {% call receivedParameterName parameter function %} = {{ parameter.name }}
+    {% endfor %}
   }
 
   {% endfor %}

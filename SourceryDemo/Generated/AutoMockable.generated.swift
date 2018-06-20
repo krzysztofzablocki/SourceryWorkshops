@@ -12,13 +12,12 @@ class BasicProtocolMock: BasicProtocol {
 
 
   func loadConfiguration() -> String? {
-
   }
 
   var receivedSaveConfiguration: String!
 
   func save(configuration: String) -> Void {
-
+    receivedSaveConfiguration = configuration
   }
 
 }
