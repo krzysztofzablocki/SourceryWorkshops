@@ -5,20 +5,28 @@
 
 
 
+
 class VariablesProtocolMock {
-  var company: String?
+  var company: String? {
+    get {
+      return underlyingCompany
+    }
+    set {
+      underlyingCompany = newValue
+    }
+  }
   var underlyingCompany: String!
 
-  var name: String
+  var name: String { return underlyingName }
   var underlyingName: String!
 
-  var age: Int
+  var age: Int { return underlyingAge }
   var underlyingAge: Int!
 
-  var kids: [String]
+  var kids: [String] { return underlyingKids }
   var underlyingKids: [String]!
 
-  var universityMarks: [String: Int]
+  var universityMarks: [String: Int] { return underlyingUniversityMarks }
   var underlyingUniversityMarks: [String: Int]!
 
 }
