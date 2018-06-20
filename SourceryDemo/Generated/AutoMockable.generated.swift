@@ -7,6 +7,9 @@
 
 
 
+class BasicProtocolMock: BasicProtocol {
+}
+
 class VariablesProtocolMock: VariablesProtocol {
   var company: String? {
     get {
@@ -31,3 +34,4 @@ class VariablesProtocolMock: VariablesProtocol {
   var underlyingUniversityMarks: [String: Int]!
 
 }
+

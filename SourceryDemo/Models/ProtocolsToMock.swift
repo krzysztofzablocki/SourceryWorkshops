@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol BasicProtocol {
+protocol BasicProtocol: AutoMockable {
     func loadConfiguration() -> String?
     func save(configuration: String)
 }

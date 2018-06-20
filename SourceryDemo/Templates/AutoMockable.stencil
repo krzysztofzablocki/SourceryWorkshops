@@ -27,4 +27,5 @@ class {{protocol.name}}Mock: {{protocol.name}} {
 
   {% endfor %}
 }
+
 {% endfor %}
