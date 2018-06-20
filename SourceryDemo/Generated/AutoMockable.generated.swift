@@ -7,7 +7,20 @@
 
 
 
+
 class BasicProtocolMock: BasicProtocol {
+
+
+  func loadConfiguration() -> String? {
+
+  }
+
+  var receivedSaveConfiguration: String!
+
+  func save(configuration: String) -> Void {
+
+  }
+
 }
 
 class VariablesProtocolMock: VariablesProtocol {
@@ -32,6 +45,7 @@ class VariablesProtocolMock: VariablesProtocol {
 
   var universityMarks: [String: Int] { return underlyingUniversityMarks }
   var underlyingUniversityMarks: [String: Int]!
+
 
 }
 

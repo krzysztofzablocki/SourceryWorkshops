@@ -20,10 +20,24 @@
 
 {% macro underlyingVariableName variable %}underlying{{variable.name|upperFirstLetter}}{% endmacro %}
 
+{% macro receivedParameterName parameter function %}received{{function.callName|upperFirstLetter}}{{parameter.name|upperFirstLetter}}{% endmacro %}
+{% macro addReceivedParameterVariable parameter function %}var {% call receivedParameterName parameter function %}: {{parameter.unwrappedTypeName}}!{% endmacro %}
+
 {% for protocol in types.implementing.AutoMockable|protocol %}
 class {{protocol.name}}Mock: {{protocol.name}} {
   {% for variable in protocol.variables %}
   {% call addUnderlyingVariable variable %}
+
+  {% endfor %}
+
+  {% for function in protocol.methods %}
+  {% for parameter in function.parameters %}
+  {% call addReceivedParameterVariable parameter function %}
+  {% endfor %}
+
+  func {{function.name}} -> {{function.returnTypeName}} {
+
+  }
 
   {% endfor %}
 }
