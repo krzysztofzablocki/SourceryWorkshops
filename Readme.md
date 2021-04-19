@@ -2,7 +2,7 @@
 
 Learn to use Sourcery to avoid having to type repetitive, boring code and improve your productivity & ease maintenance !
 
-## Update
+## Sourcery Pro
 The best way to learn and write templates is to use [Sourcery Pro](https://merowing.info/sourcery-pro/) as it features powerful editor and also extends your Xcode with live templates, there is also no neccesary manual integration to get started unlike CLI setup.
 
 ## Requirements
